@@ -243,7 +243,127 @@ float mod(float x, float y)
 vec2 mod(vec2 x, vec2 y)  
 vec3 mod(vec3 x, vec3 y)  
 vec4 mod(vec4 x, vec4 y)
+
+float mod(float x, float y)  
+vec2 mod(vec2 x, float y)  
+vec3 mod(vec3 x, float y)  
+vec4 mod(vec4 x, float y)
 ```
 
 * `mod`函数返回x模于y的值. 输入参数可以是浮点纯量或浮点向量. 如果是浮点向量, 则按照元素方向进行运算
-* 注意: 
+* 此外`mod`还有带有2个参数的函数, 第二个参数是浮点纯量
+
+### 最小值
+
+```cpp
+float min(float x, float y)  
+vec2 min(vec2 x, vec2 y)  
+vec3 min(vec3 x, vec3 y)  
+vec4 min(vec4 x, vec4 y)
+
+float min(float x, float y)  
+vec2 min(vec2 x, float y)  
+vec3 min(vec3 x, float y)  
+vec4 min(vec4 x, float y)
+```
+
+* `min`函数返回两个参数的最小值. 输入参数可以是浮点纯量或浮点向量. 如果是浮点向量, 则按照元素方向进行运算
+* 此外`min`函数还有第二个参数是浮点纯量的函数
+
+### 最大值
+
+```cpp
+float max(float x, float y)  
+vec2 max(vec2 x, vec2 y)  
+vec3 max(vec3 x, vec3 y)  
+vec4 max(vec4 x, vec4 y)
+
+float max(float x, float y)  
+vec2 max(vec2 x, float y)  
+vec3 max(vec3 x, float y)  
+vec4 max(vec4 x, float y)
+```
+
+* `max`函数返回两个参数的最大值. 输入参数可以是浮点纯量或浮点向量. 如果是浮点向量
+, 则按照元素方向进行运算
+* 此外`max`函数还有第二个参数是浮点纯量的函数
+
+### clamp
+
+```cpp
+float clamp(float x, float minVal, float maxVal)  
+vec2 clamp(vec2 x, vec2 minVal, vec2 maxVal)  
+vec3 clamp(vec3 x, vec3 minVal, vec3 maxVal)  
+vec4 clamp(vec4 x, vec4 minVal, vec4 maxVal)
+
+float clamp(float x, float minVal, float maxVal)  
+vec2 clamp(vec2 x, float minVal, float maxVal)  
+vec3 clamp(vec3 x, float minVal, float maxVal)  
+vec4 clamp(vec4 x, flfloat minVal, float maxVal)
+```
+
+* `clamp`函数在当x大于minVal并且小于maxVal时返回x, 当x小于minVal时返回minVal, 当x大于maxVal时返回maxVal. 输入参数可以是浮点纯量或浮点向量. 如果是浮点向量, 则按照元素方向进行运算
+* 此外`clamp`函数还有第二个和第三个参数是浮点纯量的函数
+
+### mix
+
+```cpp
+float mix(float x, float y, float a)  
+vec2 mix(vec2 x, vec2 y, vec2 a)  
+vec3 mix(vec3 x, vec3 y, vec3 a)  
+vec4 mix(vec4 x, vec4 y, vec4 a)
+
+float mix(float x, float y, float a)  
+vec2 mix(vec2 x, vec2 y, float a)  
+vec3 mix(vec3 x, vec3 y, float a)  
+vec4 mix(vec4 x, vec4 y, float a)
+```
+
+* `mix`函数返回x和y的线性混合, 例如x * ((1-a) + (y * a)). 输入参数可以是浮点纯量或浮点向量. 如果是浮点向量, 则按照元素方向进行运算
+* 此外`mix`函数还有第三个参数是浮点纯量的函数
+
+## step
+
+```cpp
+float step(float edge, float x)  
+vec2 step(vec2 edge, vec2 x)  
+vec3 step(vec3 edge, vec3 x)  
+vec4 step(vec4 edge, vec4 x)
+
+float step(float edge, float x)  
+vec2 step(float edge, vec2 x)  
+vec3 step(float edge, vec3 x)  
+vec4 step(float edge, vec4 x)
+```
+
+* `step`函数在当x小于edge时返回0.0, 否则返回1.0. 输入参数可以是浮点纯量或浮点向量. 如果是浮点向量, 则按照元素方向进行运算
+* 此外`step`函数还有edge参数是浮点纯量的函数
+
+### smoothstep
+
+```cpp
+float smoothstep(float edge0, float edge1, float x)  
+vec2 smoothstep(vec2 edge0, vec2 edge1, vec2 x)  
+vec3 smoothstep(vec3 edge0, vec3 edge1, vec3 x)  
+vec4 smoothstep(vec4 edge0, vec4 edge1, vec4 x)
+
+float smoothstep(float edge0, float edge1, float x)  
+vec2 smoothstep(float edge0, float edge1, vec2 x)  
+vec3 smoothstep(float edge0, float edge1, vec3 x)  
+vec4 smoothstep(float edge0, float edge1, vec4 x)
+```
+
+* `smoothstep`函数在当x小于edge0时返回0.0, 当x大于edge1时返回1.0, 否则返回使用厄尔米多项式(Hermite polynomials)插值的介于0.0到1.0之间的值. 输入参数可以是浮点纯量或浮点向量. 如果是浮点向量, 则按照元素方向进行运算
+* 此外`smoothstep`函数还有edge0和edge1参数是浮点纯量的函数
+
+
+## 几何函数
+
+### 长度
+
+```cpp
+float length(float x)  
+float length(vec2 x)  
+float length(vec3 x)  
+float length(vec4 x)
+```
