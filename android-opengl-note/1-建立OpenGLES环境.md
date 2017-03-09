@@ -25,7 +25,7 @@
 
 ## 为OpenGL图像创建一个Activity
 
-使用OpenGL的activity同普通应用一样. 主要的区别在于activity中的布局. 在OpenGL的不居中, 一般会使用`GLSurfaceView`.
+使用OpenGL的activity同普通应用一样. 主要的区别在于activity中的布局. 在OpenGL的布局中, 一般会使用`GLSurfaceView`.
 
 以下代码演示了activity中使用`GLSurfaceView`的最小实现:
 
