@@ -279,6 +279,7 @@ Log.w(TAG, "Version: " + version );
 * [GPU处理图像Shader的入门](http://www.jianshu.com/p/8687a040eb48)
 * [OpenGLES着色器(Shader)介绍](http://imgtec.eetrend.com/blog/1948)
 * [OpenGL超级宝典笔记](https://my.oschina.net/sweetdark/blog/208024)
+* [Martin20150405](http://blog.csdn.net/martin20150405)
 
 Shader资源:
 * [Shadertoy](https://www.shadertoy.com/)
